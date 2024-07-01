@@ -9,52 +9,61 @@ Currently, two official plugins are available:
 
 
 # # # React Playground of André Usui
-  Preparação para produção do Portifolio Playground React
+  Preparation for Portfolio Playground React production
+
 
 # Desafios: 
-  -Não utilizar de bibliotecas para front-end: Materials.ui
-  -Exercitar conhecimentos de css e html nativos
-  -Single page App (?)
-  -Comunicação assíncrona com Pedro
-  -Github projects
-    -Canban
-    -Branching strategies GitHub
-  -acessibilidade
-  -Index DB (?)
+  - Dont use libraries for front-end as "Materials.ui"
+  - Exercise knowledge of native CSS and HTML
+  - Single page App (?)
+  - Asynchronous communication with Pedro and Team
+  - Github projects:
+    - Canban
+    - Branching strategies GitHub
+  - Accessibility
+  - Index DB (?)
+
 
 # Landing page
-  -Apresentação de André Usui
-  -Investir no visual para chamar atenção
-  -Texto simples falando sobre André
-  -Uma foto com fundo cortado (?)
-  -background usando css
-    -tentar fazer um background com uma faixa inclinada
-      -hover para expansão da faixa
-      -fundo escuro e faixa vermelha ou azul
-      -foto sem fundo (?)
-      -pattern?
+  - Invest in home appearence to attract attention
+  - Simple text
+  - An image using HTML and CSS only
+  - background usando css
+
+
 # Header
-  -buttons 
-    -Home(que leva para o topo da página)
-    -Playground Links
-      -Testes,
-      -Projetos novos em React,
-      -Projetos antigos em js native,
-    -Contact me(dados do user)
-    -More about me(história do user)
-    -GitHub(que leva ao github do user)
-  -title React Playground à esquerda
-# Playground
-  -lista dinâmica dos projetos
-  -grid 3 x 3
-  -hover expanse com mais detalhes
-  -App antigos com js native
-# Contact me
+  - Buttons 
+    - Home (leads to the Landscape)
+    - Playground Links
+      - Tests,
+      - New projects in React,
+      - Old projects using JS native,
+    - Contact me 
+    - More about me 
+    - GitHub 
+  - Title at left;
+
 
 # More about me
+
+
+# Playground
+  - Dinamic list of new React projects
+  - hover expanse with more details (?)
+  - Older projects using JS native
+
+
+# Contact me
+
 
 # # # Notas de atualização # # #
 
 # 30/06 
-  - Criação do aplicativo
-  -
+  - App Creation
+  - Mount Header and Landscape Component
+  - Choose Collor Palett and Theme schema
+
+# 01/07
+  - Mount Project and Playground Component
+  - Restyled Landscape
+  - Begin About Me Component

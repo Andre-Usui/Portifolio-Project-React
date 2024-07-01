@@ -6,6 +6,10 @@
   --main-palette-4-shadow: #5f7c00;
   --main-color: #f1f0e8;
   --main-color2: #070707;
+  --alt-color: #dcdbdb;
+  --alt-color2: #565656;
+  --main-font-size: 1.3rem;
+  --main-h1-size: 2rem;
 }
 
 body{
@@ -13,7 +17,13 @@ body{
   padding: 0;
   color: var(--main-color);
   font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
+  font-size: var(--main-font-size);
+  
 }
+
+/* ###################### */ 
+/* ####### HEADER ####### */ 
+/* ###################### */ 
 
 .header{
   width: 100%;
@@ -27,15 +37,19 @@ body{
   align-items: center;
   text-shadow: 0 0 0.3rem var(--main-palette-4);
   position:fixed;
-  z-index: 1;
+  z-index: 99;
 }
 
 .header h1{
-  margin-left: 1rem;
+  margin-left: 5rem;
+  font-size: var(--main-h1-size);
+  font-style:oblique;
+}
+.header h1 strong{
+  font-size: calc(var(--main-h1-size) + .8rem);
 }
 
-
-.button{
+.headerButton{
   background-color: transparent;
   color: var(--main-color2);
   min-width: 8rem;
@@ -46,79 +60,256 @@ body{
 
 }
 
-.button:hover{
+.headerButton:hover{
   font-size: 1.1rem;
   transition:ease-out 0.1s;
 }
+
+/* ######################### */ 
+/* ####### LANDSCAPE ####### */ 
+/* ######################### */ 
 
 #landscape{
   width: 100%;
   height: 100vh;
   background-color: var(--main-palette-1);
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 3%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='1' stroke='hsla(157, 100%, 4%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   color: var(--main-palette-4);
   font-size: 2rem;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;  
+
 }
 
-.landscapeContainer h1, h2 {
-  text-shadow: 0 0 0.5rem var(--main-palette-4);
-}
-.landscapeContainer h1:hover, h2:hover{
-  text-shadow: 0 0 0.6rem var(--main-palette-4), 0 0 0.7rem var(--main-palette-4-shadow);
-  transition: 0.3s;
+
+.landscapeContainer h1 {
+  text-shadow: 0 0 0.8rem var(--main-palette-4);
+  margin-left: 5rem;
 }
 
-.landscapeImg{
+.landscapeContainer h1:hover{
+  text-shadow: 0 0 1.2rem var(--main-palette-4);
+  transition: all ease 0.3s;
+}
+
+.landscapeBox{
   height: 20rem;
-  width: 20rem;
-  background-color: var(--main-palette-4);
-  align-items: center;
-  overflow: hidden;
-  object-fit: contain;
-  border-radius: 50%;
-  box-shadow:  0 0 1rem 1rem var(--main-palette-4);
+  width: 20%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  position: relative;
+  margin-right: 5rem;
+  
 }
 
-.landscapeImg:hover{
-  box-shadow: 0 0 1rem 1.1rem var(--main-palette-4), 0 0 1rem 1.2rem var(--main-palette-4-shadow);
-  transition: 0.3s;
+.landscapeBox:hover .landscapeFx {
+  box-shadow: 0 0 1rem 1.2rem var(--main-palette-4);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+
+}
+
+.landscapeBox>.landscapeFx {
+  box-shadow:  0 0 1rem 1rem var(--main-palette-4);
+  -webkit-transition: .3s all;   
+  -webkit-transition-delay: .3s; 
+  -moz-transition: .3s all;   
+  -moz-transition-delay: .3s; 
+  -ms-transition: .3s all;   
+  -ms-transition-delay: .3s; 
+  -o-transition: .3s all;   
+  -o-transition-delay: .3s; 
+  transition: .3s all;   
+  transition-delay: .3s; 
 }
 
 .landscapeFx{
-  margin: 1rem;
+  margin: 0;
   padding: 0;
   height: 100%;
-  width: 6%;
-  transform: skew(-15deg);
+  width: 1rem;
+  transform: skew(-30deg);
   background-color: var(--main-palette-4);
-  box-shadow:  0 0 1rem 1rem var(--main-palette-4);
 }
 
-.landscapeFx:hover{
-  box-shadow: 0 0 1rem 1.2rem var(--main-palette-4), 0 0 1rem 1.3rem var(--main-palette-4-shadow);
-  transition: 0.3s;
+.landscapeFxNull{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 1rem;
 }
+
+.landscapeClose{
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 3%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='1' stroke='hsla(157, 100%, 4%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  height: 20vh;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 30%);
+  box-shadow: 0 1 1rem 1.2rem var(--main-palette-4);
+}
+
+
+/* ############################# */ 
+/* ####### MORE ABOUT ME ####### */ 
+/* ############################# */ 
+
+#moreAbout{
+  
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: white url("../wallpaper1.png") no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+  z-index: 5;
+  position: relative;
+}
+
+#moreAbout h1{
+  margin: 0;
+  padding: 0;
+}
+
+/* ########################## */ 
+/* ####### PLAYGROUND ####### */ 
+/* ########################## */ 
 
 #playground{
   width: 100%;
-  height: 30vh;
-  background-color:blueviolet;
+  min-height: 100vh;
+  height: 100%;
+  background-color:var(--main-color);
+  color: var(--main-color2);
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#moreAbout{
-  width: 100%;
-  height: 30vh;
-  background-color:brown;
+.playgroundDetails{
+  margin: 1rem 0 3rem 3rem;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.playgroundDetails h1{
   margin: 0;
   padding: 0;
+  color: var(--main-palette-4);
+
+
 }
+
+.project{
+  width: 40vw;
+  min-height: 20vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.projectImg{
+  height: 20rem;
+  width: 20rem;
+  background-color: white;
+  display:block;
+  text-align: center;
+  border: solid .3rem white;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: contain;
+  box-shadow: .5rem .6rem 1rem .05rem grey;
+  filter: saturate(0);
+  transition: .3s;
+}
+
+.projectImg > img{
+  object-fit: contain;
+}
+
+.projectImg:hover{
+  box-shadow: .5rem .8rem 1.3rem .01rem grey;
+  filter: saturate(1);
+}
+
+.projectImg:hover > img{
+  transition: ease-in-out .3s;
+  transform: scale(1.05);
+  
+}
+
+
+.projectDetails{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.projectDetails p{
+  margin: 0;
+}
+
+.projectDetails h2{
+  margin: 0;
+  padding: 0;
+  font-size: 2.3rem;
+  color: var(--main-palette-4);
+}
+
+.projectDetails small{
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+}
+
+.projectIcons{
+  padding-top: 1rem;
+  font-size: .7rem;
+  color: var(--alt-color2);
+}
+
+.projectButton{
+  width: 11rem;
+  height: 3rem;
+  margin: 2rem;
+  font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  background: var(--alt-color);
+  color: var(--main-color2);
+  border: 0;
+  border-bottom: solid .1rem var(--main-palette-4);
+  border-radius: 5px;
+}
+
+.projectButton:hover{
+  background: var(--main-palette-4);
+  color: var(--main-color);
+}
+
+/* ########################## */ 
+/* ####### CONTACT ME ####### */ 
+/* ########################## */ 
 
 #contactMe{
   width: 100%;
@@ -127,6 +318,10 @@ body{
   margin: 0;
   padding: 0;
 }
+
+/* ###################### */ 
+/* ####### FOOTER ####### */ 
+/* ###################### */ 
 
 #footer{
   width: 100%;

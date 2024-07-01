@@ -3,8 +3,8 @@
 function Button(props) {
 
   return(
-    <a href={props.goToId}>
-      <button className= "button">
+    <a href={props.link}>
+      <button className= {props.class}>
         {props.name}
       </button>
     </a>
