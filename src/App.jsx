@@ -2,7 +2,7 @@
 import Header from './components/Header';
 import Landscape from './components/Landscape';
 import Playground from './components/Playground';
-import MoreAbout from './components/MoreAbout';
+import AboutMe from './components/AboutMe.jsx';
 import ContactMe from './components/ContactMe.jsx';
 import Footer from './components/Footer';
 import './styles/App.css'
@@ -33,6 +33,7 @@ import './styles/App.css'
   - Friendly color Palett
     - Dark mode?
     - Change on with "sun" or "moon" button
+  - Media size
 */
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
     <>
       <Header />
       <Landscape />
-      <MoreAbout />
+      <AboutMe />
       <Playground />
       <ContactMe />
       <Footer />

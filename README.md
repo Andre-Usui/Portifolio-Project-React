@@ -67,3 +67,26 @@ Currently, two official plugins are available:
   - Mount Project and Playground Component
   - Restyled Landscape
   - Begin About Me Component
+
+# 02/07
+  - Mount AboutMe Component
+  - Restyled Component's transition 
+
+# 03/07
+  - Mount ContactMe and Footer Component
+    - Ending partially Front-end building
+  - Front-end TODO:
+    - Form Hooks on Contact
+    - Projects attatched to a map() Array 
+    - Icon implemetation
+    - Media responsive
+    - Correct the break between AboutMe and Projects Components
+    - Entry animation on Landscape
+    - Menu Header expandable
+    - Components title resposive to clip-path breakes
+      - or fixed clip-path 
+    - Insert actual descriptions and projects in the portfolio
+  - Back-end TODO:
+    - Server implementation
+    - Database implementation
+      

@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-palette-1: #070707;
   --main-palette-2: #232D3F;
   --main-palette-3: #005B41;
@@ -8,24 +8,26 @@
   --main-color2: #070707;
   --alt-color: #dcdbdb;
   --alt-color2: #565656;
-  --main-font-size: 1.3rem;
+  --main-font-size: 1rem;
   --main-h1-size: 2rem;
+  --main-bg: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 3%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='1' stroke='hsla(157, 100%, 4%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   color: var(--main-color);
   font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
   font-size: var(--main-font-size);
-  
+  background-image: var(--main-bg);
+
 }
 
-/* ###################### */ 
-/* ####### HEADER ####### */ 
-/* ###################### */ 
+/* ###################### */
+/* ####### HEADER ####### */
+/* ###################### */
 
-.header{
+.header {
   width: 100%;
   height: 10vh;
   margin: 0;
@@ -36,20 +38,22 @@ body{
   justify-content: space-between;
   align-items: center;
   text-shadow: 0 0 0.3rem var(--main-palette-4);
-  position:fixed;
+  position: fixed;
   z-index: 99;
 }
 
-.header h1{
+.header h1 {
   margin-left: 5rem;
   font-size: var(--main-h1-size);
-  font-style:oblique;
+  font-style: oblique;
+  font-family: "Anton sc", Arial, Helvetica, sans-serif;
 }
-.header h1 strong{
+
+.header h1 strong {
   font-size: calc(var(--main-h1-size) + .8rem);
 }
 
-.headerButton{
+.headerButton {
   background-color: transparent;
   color: var(--main-color2);
   min-width: 8rem;
@@ -60,27 +64,27 @@ body{
 
 }
 
-.headerButton:hover{
-  font-size: 1.1rem;
-  transition:ease-out 0.1s;
+.headerButton:hover {
+  font-size: 1.2rem;
+  transition: ease-out 0.1s;
 }
 
-/* ######################### */ 
-/* ####### LANDSCAPE ####### */ 
-/* ######################### */ 
+/* ######################### */
+/* ####### LANDSCAPE ####### */
+/* ######################### */
 
-#landscape{
+#landscape {
   width: 100%;
   height: 100vh;
   background-color: var(--main-palette-1);
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 3%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='1' stroke='hsla(157, 100%, 4%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-image: var(--main-bg);
   color: var(--main-palette-4);
   font-size: 2rem;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 
 }
 
@@ -90,12 +94,12 @@ body{
   margin-left: 5rem;
 }
 
-.landscapeContainer h1:hover{
+.landscapeContainer h1:hover {
   text-shadow: 0 0 1.2rem var(--main-palette-4);
   transition: all ease 0.3s;
 }
 
-.landscapeBox{
+.landscapeBox {
   height: 20rem;
   width: 20%;
   display: grid;
@@ -104,7 +108,7 @@ body{
   gap: 10px;
   position: relative;
   margin-right: 5rem;
-  
+
 }
 
 .landscapeBox:hover .landscapeFx {
@@ -118,20 +122,20 @@ body{
 }
 
 .landscapeBox>.landscapeFx {
-  box-shadow:  0 0 1rem 1rem var(--main-palette-4);
-  -webkit-transition: .3s all;   
-  -webkit-transition-delay: .3s; 
-  -moz-transition: .3s all;   
-  -moz-transition-delay: .3s; 
-  -ms-transition: .3s all;   
-  -ms-transition-delay: .3s; 
-  -o-transition: .3s all;   
-  -o-transition-delay: .3s; 
-  transition: .3s all;   
-  transition-delay: .3s; 
+  box-shadow: 0 0 1rem 1rem var(--main-palette-4);
+  -webkit-transition: .3s all;
+  -webkit-transition-delay: .3s;
+  -moz-transition: .3s all;
+  -moz-transition-delay: .3s;
+  -ms-transition: .3s all;
+  -ms-transition-delay: .3s;
+  -o-transition: .3s all;
+  -o-transition-delay: .3s;
+  transition: .3s all;
+  transition-delay: .3s;
 }
 
-.landscapeFx{
+.landscapeFx {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -140,53 +144,104 @@ body{
   background-color: var(--main-palette-4);
 }
 
-.landscapeFxNull{
+.landscapeFxNull {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 1rem;
 }
 
-.landscapeClose{
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 3%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='1' stroke='hsla(157, 100%, 4%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-  height: 20vh;
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 30%);
-  box-shadow: 0 1 1rem 1.2rem var(--main-palette-4);
-}
+/* ############################# */
+/* ####### ABOUT ME ####### */
+/* ############################# */
 
-
-/* ############################# */ 
-/* ####### MORE ABOUT ME ####### */ 
-/* ############################# */ 
-
-#moreAbout{
-  
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: white url("../wallpaper1.png") no-repeat;
-  background-attachment: fixed;
-  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
-  z-index: 5;
-  position: relative;
-}
-
-#moreAbout h1{
-  margin: 0;
-  padding: 0;
-}
-
-/* ########################## */ 
-/* ####### PLAYGROUND ####### */ 
-/* ########################## */ 
-
-#playground{
+#aboutMe {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-color:var(--main-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  padding-bottom: 10vh;
+}
+
+
+.aboutTitle {
+  min-height: 20vh;
+  width: 100%;
+}
+
+.aboutTop {
+  height: 5vh;
+  width: 100%;
+  border-bottom: solid 5px #005B41;
+  background-image: var(--main-bg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 33% 100%, 30% 0, 6% 0%, 3% 100%, 0 100%);
+}
+
+.aboutTitle h1 {
+  margin: 0;
+  padding: 0;
+  padding-left: 9%;
+  margin-top: -3.3rem;
+  margin-right: 5%;
+  color: var(--main-palette-4);
+  font-size: 4.5rem;
+  font-family: "Anton SC", Arial, Helvetica, sans-serif;
+  transform: skew(-15deg);
+}
+
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+
+}
+
+.aboutContainerTop {
+  flex-basis: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.aboutCard {
+  width: 28vw;
+  color: var(--main-color2);
+  background-color: rgba(156, 156, 156, 0.2);
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.aboutCard h1 {
+  color: var(--main-palette-4);
+}
+
+.aboutImg {
+  width: 20vw;
+  height: 20vw;
+  margin-bottom: 5vh;
+  background-color: var(--main-palette-4);
+  clip-path: polygon(0% 20%, 50% 0, 100% 20%, 100% 80%, 50% 100%, 0% 80%);
+}
+
+
+/* ########################## */
+/* ####### PLAYGROUND ####### */
+/* ########################## */
+
+#playground {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--main-color);
   color: var(--main-color2);
   margin: 0;
   padding: 0;
@@ -196,21 +251,53 @@ body{
   justify-content: center;
 }
 
-.playgroundDetails{
-  margin: 1rem 0 3rem 3rem;
+
+.playgroundDetailsTop1 {
+  height: 11vh;
+  width: 100%;
+  position: relative;
+  background-image: var(--main-bg);
+  box-shadow: 0px 0px 0 5px inset var(--main-palette-4);
+
+}
+
+.playgroundDetailsTop2 {
+  height: calc(5vh - 1px);
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  background-color: var(--main-color);
+  clip-path: polygon(23% 100%, 26% 0, 50% 0, 53% 100%);
+}
+
+
+.playgroundDetails {
+  width: 100%;
+  margin: 0;
   padding: 0;
   align-self: flex-start;
 }
 
-.playgroundDetails h1{
+.playgroundDetails h1 {
   margin: 0;
   padding: 0;
+  padding-left: 29%;
+  margin-right: 5%;
+  margin-top: -3rem;
   color: var(--main-palette-4);
-
-
+  font-size: 5rem;
+  font-family: "Anton SC", Arial, Helvetica, sans-serif;
+  transform: skew(-15deg);
 }
 
-.project{
+
+.playgroundDetails h3 {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 3rem;
+}
+
+.project {
   width: 40vw;
   min-height: 20vh;
   height: 100%;
@@ -226,11 +313,11 @@ body{
 
 }
 
-.projectImg{
+.projectImg {
   height: 20rem;
   width: 20rem;
   background-color: white;
-  display:block;
+  display: block;
   text-align: center;
   border: solid .3rem white;
   border-radius: 50%;
@@ -241,23 +328,23 @@ body{
   transition: .3s;
 }
 
-.projectImg > img{
+.projectImg>img {
   object-fit: contain;
 }
 
-.projectImg:hover{
+.projectImg:hover {
   box-shadow: .5rem .8rem 1.3rem .01rem grey;
   filter: saturate(1);
 }
 
-.projectImg:hover > img{
+.projectImg:hover>img {
   transition: ease-in-out .3s;
   transform: scale(1.05);
-  
+
 }
 
 
-.projectDetails{
+.projectDetails {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -266,30 +353,43 @@ body{
 
 }
 
-.projectDetails p{
+.projectDetails p {
   margin: 0;
 }
 
-.projectDetails h2{
+.projectDetails h2 {
   margin: 0;
   padding: 0;
   font-size: 2.3rem;
   color: var(--main-palette-4);
 }
 
-.projectDetails small{
+.projectDetails small {
   margin: 0;
   padding: 0;
   font-size: .8em;
 }
 
-.projectIcons{
+.projectEnd {
+  height: 10vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: -1rem;
+  background-color: transparent;
+  background-image: var(--main-bg);
+  clip-path: polygon(0 60%, 30% 0, 100% 80%, 100% 100%, 0 100%);
+  border: 0;
+}
+
+.projectIcons {
   padding-top: 1rem;
   font-size: .7rem;
   color: var(--alt-color2);
 }
 
-.projectButton{
+.projectButton {
   width: 11rem;
   height: 3rem;
   margin: 2rem;
@@ -302,31 +402,118 @@ body{
   border-radius: 5px;
 }
 
-.projectButton:hover{
+.projectButton:hover {
   background: var(--main-palette-4);
   color: var(--main-color);
 }
 
-/* ########################## */ 
-/* ####### CONTACT ME ####### */ 
-/* ########################## */ 
+/* ########################## */
+/* ####### CONTACT ME ####### */
+/* ########################## */
 
-#contactMe{
+#contactMe {
   width: 100%;
-  height: 30vh;
-  background-color:yellow;
+  min-height: 30vh;
+  height: 100%;
+  background-color: var(--main-palette-1);
+  background-image: var(--main-bg);
+  color: var(--main-color);
   margin: 0;
   padding: 0;
+
 }
 
-/* ###################### */ 
-/* ####### FOOTER ####### */ 
-/* ###################### */ 
+.contactWrapper {
+  padding: 5rem 10rem 5rem 10rem;
+}
 
-#footer{
+.contactTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactTop h1 {
+  color: var(--main-palette-4);
+  font-size: 3rem;
+  font-family: "Anton SC", Arial, Helvetica, sans-serif;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm h3 > span{
+  color: var(--main-palette-4);
+}
+
+.contactFormF {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactName {
+  width: 30rem;
+  height: 3rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  background-color: var(--main-color);
+  font-size: 1.3rem;
+  font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  border: solid 2px var(--main-palette-4);
+}
+
+.contactForm textarea {
+  width: 50rem;
+  height: 10rem;
+  margin: 0;
+  margin-top: .5rem;
+  padding: .5rem;
+  resize: none;
+  background-color: var(--main-color);
+  font-size: 1.3rem;
+  font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  border: solid 2px var(--main-palette-4);
+}
+
+.contactButton{
+  width: 8rem;
+  height: 3rem;
+  margin-top: .9rem;
+  margin-left: 43.25rem;
+  background-color: var(--main-color);
+  color: var(--main-color2);
+  font-size: .8rem;
+  font-family: 'Playwrite IT Moderna', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  border: solid 2px var(--main-palette-4);
+  transition: all 300ms;
+}
+
+.contactButton:hover{
+  background-color: var(--main-palette-4);
+  color: var(--main-color)
+}
+
+/* ###################### */
+/* ####### FOOTER ####### */
+/* ###################### */
+
+#footer {
   width: 100%;
-  height: 30vh;
-  background-color:blue;
+  height: 10vh;
   margin: 0;
   padding: 0;
+  background-color: var(--main-palette-1);
+  background-image: var(--main-bg);
+  color: var(--main-palette-4);
+  font-size: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
